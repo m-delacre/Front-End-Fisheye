@@ -6,8 +6,32 @@
     background-color: #FAFAFA;
     height: 300px;
     margin: 0 100px;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 80px;
+    padding-right: 80px;
 }
 
+.photograph-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 33,3%;
+}
+
+.photograph-contact{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 33,3%;
+}
+
+.photograph-photo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 33,3%;
+}
 .contact_button {
     font-size: 20px;
     font-weight: bold;
@@ -19,6 +43,8 @@
     background-color: #901C1C;
     border-radius: 5px;
     cursor: pointer;
+    bottom: 0;
+    right: 20px;
 }
 
 .modal {
@@ -73,4 +99,84 @@ form input {
     height: 68px;
     border: none;
     border-radius: 5px;
+}
+
+/*menu nav*/
+.section-trie{
+    margin: 0 100px;
+    display: flex;
+    align-items: center;
+}
+
+.section-trie p{
+    margin-right: 10px;
+    font-weight: bolder;
+    font-size: 20px;
+    margin-top: 35px;
+}
+
+nav{
+    display: flex;
+    font-size: 20px;
+    width: 100px;
+}
+
+.arrow{
+    color: white;
+    font-size: 1.5em;
+    margin-left: 15px;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar {
+    height: 50px;
+    padding: 0;
+    margin: 0;
+    margin-top: -20px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar li {
+    height: auto;
+    width: 130px;
+    list-style: none;
+    font: normal bold 13px/1em Arial, Verdana, Helvetica;
+    background-color: #901C1C;
+    border-radius: 5px;
+}
+
+.navbar a {
+    padding: 18px 0;
+    text-decoration: none;
+    color: white;
+    display: block;
+    padding-left: 10px;
+    font-size: 15px;
+}
+
+.navbar li ul {
+    display: none;
+    height: auto;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar li:hover ul {
+    display: block;
+}
+
+.navbar li ul li {
+    background-color: #901C1C;
+}
+
+.navbar li ul li a {
+    border-top: 1px solid #ffffff;
+}
+
+.navbar li ul li a:hover {
+    background-color: #5d0b0b;
 }
