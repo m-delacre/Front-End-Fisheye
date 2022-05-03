@@ -2,7 +2,6 @@
 var urlSearchParams = URL.searchParams;
 let params = (new URL(document.location)).searchParams;
 let id = params.get('id');
-console.log(id);
 
 async function getPhotographers() {
     let photographers = [];
@@ -22,10 +21,20 @@ async function getPhotographers() {
 async function getPhotographe() {
     // Récupère les datas des photographes
     const listePhotographes = await getPhotographers();
-    console.log(listePhotographes)
     const photographe = listePhotographes.photographers.find(photographers => photographers.id == id);
-    console.log(photographe);
-    console.log(photographe.name);
+    let photoProfil = document.getElementById('photoProfil');
+    let nom = document.getElementById('photographeName');
+    let localisation = document.getElementById("photographeLocalisation");
+    let slogan = document.getElementById("photographeSlogan");
+    let prix = document.getElementById('pricetag');
+    let nomModal = document.getElementById('contact_name');
+    nomModal.innerHTML = photographe.name;
+
+    nom.innerHTML = photographe.name;
+    photoProfil.setAttribute("src", `assets/images/photographers ID Photos/${photographe.portrait}`);
+    localisation.innerHTML = `${photographe.city}, ${photographe.country}`;
+    slogan.innerHTML = photographe.tagline;
+    prix.innerHTML = `${photographe.price}€/jour`;
 };
 
 getPhotographe();

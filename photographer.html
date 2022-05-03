@@ -15,15 +15,15 @@
   </head>
   <body>
     <header>
-      <a href="./index.html"><img src="assets/images/logo.png" class="logo" alt="Fisheye Home page"/></a>
+      <a href="./index.html"><img src="assets/images/logo.png" class="logo" alt="Fisheye Home page" id="logo"/></a>
     </header>
     <main id="main">
       <div class="photograph-header">
         <!--Info écrite-->
         <div class="photograph-info">
-          <h2>Nom photographe</h2>
-          <h3>Localisation</h3>
-          <h4>slogan</h4>
+          <h2 id="photographeName">Nom photographe</h2>
+          <h3 id="photographeLocalisation">Localisation</h3>
+          <h4 id="photographeSlogan">slogan</h4>
         </div>
         <!--Contact-->
         <div class="photograph-contact">
@@ -31,10 +31,10 @@
         </div>
         <!--Photo-->
         <div class="photograph-photo">
-          <p><img src="./assets/photographers/account.png"></p>
+          <p><img src="./assets/photographers/account.png" id="photoProfil" class="photograph-img"></p>
         </div>
     </main>
-    <section class="section-trie">
+    <section class="section-trie" id="section-trie">
       <p>Trier par</p>
       <!--trier par menu déroulant (popu>Date>Titre)-->
       <nav>
@@ -49,23 +49,36 @@
         </ul>
       </nav>
     </section>
-    <div id="contact_modal">
+    <div class="bottom-panel">
+      <div class="bottom-panel--like">
+        <p>999 999</p>
+        <i class="fa-solid fa-heart heart"></i>
+      </div>
+      <div class="bottom-panel--tarif">
+        <p id="pricetag">XXX€ /jour</p>
+      </div>
+    </div>
+    <div id="contact_modal" class="formulaire">
 			<div class="modal">
 				<header>
-          <h2>Contactez-moi</h2>
-          <img src="assets/icons/close.svg" onclick="closeModal()" />
-          <h2 id="contact_name"></h2>
+          <div class="headerModal-text">
+            <h2>Contactez-moi</h2>
+            <h2 id="contact_name"></h2>
+          </div>
+          <div class="headerModal-icon">
+            <img src="assets/icons/close.svg" onclick="closeModal()" />
+          </div>
         </header>
         <!--formulaire-->
-        <form name="contact" action="index.html" method="get" id="formulaire">
+        <form name="contact" action="" method="get" id="formulaire">
           <!--Prénom-->
-          <div class="formData" data-error="Veuillez entrer 2 caractères ou plus pour le champ du nom." data-error-visible="false">
+          <div class="formData" data-error="Veuillez entrer au moins 2 caractères ou plus pour le champ du prénom." data-error-visible="false">
             <label for="prenom">Prénom</label><br>
             <input class="text-control" type="text" id="prenom" name="prenom"/><br>
           </div>
 
           <!--Nom -->
-          <div class="formData" data-error="Veuillez entrer 2 caractères ou plus pour le champ du nom." data-error-visible="false">
+          <div class="formData" data-error="Veuillez entrer au moins 2 caractères ou plus pour le champ du nom." data-error-visible="false">
             <label for="nom">Nom</label><br>
             <input class="text-control" type="text" id="nom" name="nom"/><br>
           </div>
@@ -76,12 +89,11 @@
             <input class="text-control" type="email" id="email" name="email"/><br>
           </div>
 
-          <div>
+          <div class="textarea-message">
             <p>
               <label for="message">Votre message</label>
               <br/>
-              
-              <textarea name="message" id="message"></textarea>
+              <textarea name="message" id="commentaire"></textarea>
           </p>
           </div>
           <button class="contact_button">Envoyer</button>
