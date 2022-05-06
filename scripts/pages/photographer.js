@@ -34,7 +34,7 @@ async function getMedias() {
     return ({media: [...medias]})
 }
 
-async function getPhotographe() {
+async function findPhotographe() {
     // Récupère les datas des photographes
     const listePhotographes = await getPhotographers();
     const photographe = listePhotographes.photographers.find(photographers => photographers.id == id);
@@ -55,19 +55,22 @@ async function getPhotographe() {
 };
 
 async function displayMedia(medias) {
-    const mediaSection = document.querySelector(".media_section");
+    const mediaSection = document.getElementById("media_section");
 
     medias.forEach((media) => {
-        const mediaModel = mediaFactory(media);
+        if(media.photographerId == id){
+            const mediaModel = mediaFactory(media);
         const mediaCardDOM = mediaModel.getMediaCardDOM();
         mediaSection.appendChild(mediaCardDOM);
+        }
     });
 };
 
 async function init() {
-    await getPhotographe();
-    const { medias } = await getMedias();
-    await displayMedia(medias);
+    getPhotographers();
+    findPhotographe();
+    const { media } = await getMedias();
+    displayMedia(media);
 };
     
 init();

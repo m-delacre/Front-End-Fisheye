@@ -17,7 +17,7 @@ function mediaFactory(data) {
         lien.setAttribute("href", `#`);
         const img = document.createElement( 'img' );
         img.setAttribute("src", picture);
-        img.setAttribute("alt", `nom de la photo: ${title}`);
+        img.setAttribute("alt", `${title}`);
         lien.appendChild(img);
         photo.appendChild(lien);
 
@@ -28,6 +28,7 @@ function mediaFactory(data) {
         //le nom de la photo
         const titrePhoto = document.createElement( 'h3' );
         titrePhoto.textContent = title;
+        titrePhoto.setAttribute('class','mediaCard--info--titre');
         //le like
         const like = document.createElement( 'div' );
         like.setAttribute('class','mediaCard--info--like');
@@ -35,6 +36,7 @@ function mediaFactory(data) {
         nombreLike.textContent = `${likes}`;
         const coeur = document.createElement('i');
         coeur.setAttribute("class",'fa-solid fa-heart heartLike');
+        coeur.setAttribute("aria-label",'likes');
         like.appendChild(nombreLike);
         like.appendChild(coeur);
         info.appendChild(titrePhoto);

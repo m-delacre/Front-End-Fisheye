@@ -276,31 +276,58 @@ nav{
     width: 100%;
     height: 100%;
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .mediaCard{
-    width: 300px;
+    width: 450px;
     height: 500px;
     display: flex;
     flex-direction: column;
+    margin: 40px
 }
 
 .mediaCard--img{
-    height: 80%;
+    height: 85%;
     width: 100%;
+}
+
+.mediaCard--img img{
+    width: 100%;
+    height: 100%;
     object-fit: cover;
+    border-radius: 10px;
 }
 
 .mediaCard--info{
     display: flex;
-    height: 20%;
-    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    height: 15%;
+    width: 450px;
+    margin-top: 20px;
 }
 
 .mediaCard--info--like{
     display: flex;
+    align-items: center;
+    width: auto;
+    height: 100%;
+    font-size: 23px;
+    color: #6d0f0f;
+    font-weight: bold;
+    margin-top: -45px;
 }
 
+.mediaCard--info--titre{
+    height: 100%;
+    width: 90%;
+    font-size: 25px;
+    color: #5d0b0b;
+    font-weight: lighter;
+}
 
 /*bottom panel*/
 .bottom-panel{
@@ -333,9 +360,8 @@ nav{
 }
 
 .heartLike{
-    font-size: 0.8em;
+    font-size: 1em;
     color: #901C1C;
-    margin-top: 20px;
     margin-left: 10px;
 }
 
