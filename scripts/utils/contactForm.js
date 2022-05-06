@@ -6,8 +6,13 @@ const logo = document.getElementById('logo');
 function displayModal() {
 	logo.style.display = "none";
 	main.style.display = "none";
-    trie.style.display = "none";
+  trie.style.display = "none";
 	modal.style.display = "flex";
+  //gestion de visibilité pour les lecteurs d'écrans
+  modal.setAttribute('aria-hidden','false');
+  logo.setAttribute('aria-hidden','true');
+	main.setAttribute('aria-hidden','true');
+  trie.setAttribute('aria-hidden','true');
 }
 
 function closeModal() {
@@ -15,6 +20,11 @@ function closeModal() {
 	main.style.display = "block";
     trie.style.display = "block";
 	modal.style.display = "none";
+  //gestion de visibilité pour les lecteurs d'écrans
+  modal.setAttribute('aria-hidden','true');
+  logo.setAttribute('aria-hidden','false');
+	main.setAttribute('aria-hidden','false');
+  trie.setAttribute('aria-hidden','false');
 }
 
 //variables
@@ -76,7 +86,6 @@ function validationForm(){
     checkMail()
   }
 }
-
 
 //affiche le message 'merci de votre inscription'
 function envoieValider(){

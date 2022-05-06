@@ -17,7 +17,7 @@
     <header>
       <a href="./index.html"><img src="assets/images/logo.png" class="logo" alt="Fisheye Home page" id="logo"/></a>
     </header>
-    <main id="main">
+    <main id="main" aria-hidden="true">
       <div class="photograph-header">
         <!--Info écrite-->
         <div class="photograph-info">
@@ -34,7 +34,7 @@
           <p><img src="./assets/photographers/account.png" id="photoProfil" class="photograph-img"></p>
         </div>
     </main>
-    <section class="section-trie" id="section-trie">
+    <section class="section-trie" id="section-trie" aria-hidden="true">
       <p>Trier par</p>
       <!--trier par menu déroulant (popu>Date>Titre)-->
       <nav>
@@ -49,6 +49,9 @@
         </ul>
       </nav>
     </section>
+    <section id="media_section" class="mediaDisplay">
+
+    </section>
     <div class="bottom-panel">
       <div class="bottom-panel--like">
         <p>999 999</p>
@@ -59,7 +62,7 @@
       </div>
     </div>
     <div id="contact_modal" class="formulaire">
-			<div class="modal">
+			<div class="modal" aria-hidden="true" role="dialog" aria-describedby="modalTitle">
 				<header>
           <div class="headerModal-text">
             <h2>Contactez-moi</h2>
@@ -101,6 +104,7 @@
         <!--fin formulaire-->
 			</div>
 		</div>
+    <script src="/scripts/factories/media_factory.js"></script>
     <script src="/scripts/utils/contactForm.js"></script>
     <script src="/scripts/pages/photographer.js"></script>
   </body>

@@ -1,31 +1,4 @@
 async function getPhotographers() {
-    /*    
-        // Penser à remplacer par les données récupérées dans le json
-        const photographers = [
-            {
-                "name": "Mimi Keel",
-                "id": 243,
-                "city": "London",
-                "country": "UK",
-                "tagline": "Voir le beau dans le quotidien",
-                "price": 400,
-                "portrait": "MimiKeel.jpg"
-            },
-            {
-                "name": "Ellie-Rose Wilkens",
-                "id": 930,
-                "city": "Paris",
-                "country": "France",
-                "tagline": "Capturer des compositions complexes",
-                "price": 250,
-                "portrait": "EllieRoseWilkens.jpg"
-            }
-        ]
-        // et bien retourner le tableau photographers seulement une fois
-        return ({
-            photographers: [...photographers]})
-        
-    */
     let photographers = [];
     await fetch('./data/photographers.json')
     .then(function(response) {

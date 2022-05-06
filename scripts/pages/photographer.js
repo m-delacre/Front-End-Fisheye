@@ -18,6 +18,22 @@ async function getPhotographers() {
     return ({photographers: [...photographers]})
 }
 
+async function getMedias() {
+    let medias = [];
+    await fetch('./data/photographers.json')
+    .then(function(response) {
+        return response.json();
+    })
+    .then(function(value) {
+        medias = value.media;
+        console.log(medias);
+    })
+    .catch(function(error){
+        console.log(error);
+    });
+    return ({media: [...medias]})
+}
+
 async function getPhotographe() {
     // Récupère les datas des photographes
     const listePhotographes = await getPhotographers();
@@ -30,6 +46,7 @@ async function getPhotographe() {
     let nomModal = document.getElementById('contact_name');
     nomModal.innerHTML = photographe.name;
 
+    //assigner les datas au bon endroit
     nom.innerHTML = photographe.name;
     photoProfil.setAttribute("src", `assets/images/photographers ID Photos/${photographe.portrait}`);
     localisation.innerHTML = `${photographe.city}, ${photographe.country}`;
@@ -37,9 +54,20 @@ async function getPhotographe() {
     prix.innerHTML = `${photographe.price}€/jour`;
 };
 
-getPhotographe();
-/*
-const a = getPhotographers();
-const photographe = a.photographers.find(photographer => photographer.id === id);
-console.log(photographe);
-*/
+async function displayMedia(medias) {
+    const mediaSection = document.querySelector(".media_section");
+
+    medias.forEach((media) => {
+        const mediaModel = mediaFactory(media);
+        const mediaCardDOM = mediaModel.getMediaCardDOM();
+        mediaSection.appendChild(mediaCardDOM);
+    });
+};
+
+async function init() {
+    await getPhotographe();
+    const { medias } = await getMedias();
+    await displayMedia(medias);
+};
+    
+init();
