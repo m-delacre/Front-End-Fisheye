@@ -8,18 +8,27 @@ function mediaFactory(data) {
         const article = document.createElement( 'article' );
         article.setAttribute('class','mediaCard');
 
-
         //la partie photo
         const photo = document.createElement('div');
         photo.setAttribute('class','mediaCard--img');
-        //la photo de profil
-        const lien = document.createElement('a');
-        lien.setAttribute("href", `#`);
+        /*si photo ou si vidéo
+        const monType = data.image;
+        let type = monType.slice(monType.length - 4);
+        if(type == '.jpg'){
+            //la photo
+            const img = document.createElement( 'img' );
+            img.setAttribute("src", picture);
+            img.setAttribute("alt", `${title}`);
+            photo.appendChild(img);
+        } else if(type == '.mp4'){
+            console.log('il y a une vidéo');
+        }
+        */
+        //la photo
         const img = document.createElement( 'img' );
         img.setAttribute("src", picture);
         img.setAttribute("alt", `${title}`);
-        lien.appendChild(img);
-        photo.appendChild(lien);
+        photo.appendChild(img); 
 
 
         //partie info

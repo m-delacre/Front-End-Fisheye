@@ -370,3 +370,63 @@ nav{
     color: black;
     font-weight: bold;
 }
+
+/*lightbox*/
+.lightbox{
+    display:none;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.lightbox--top{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.lightbox--top img{
+    width: 100px;
+    height: 100px;
+}
+
+.lightbox--bot{
+    display: flex;
+    font-size: 13px;
+    margin-top: 30px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 50px;
+  }
+  
+  .slider img {
+    max-width: 100%;
+    display: none;
+  }
+  img.active {
+    display: block;
+    animation: fade 0.8s;
+  }
+  @keyframes fade {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .cont-btn {
+    width: 100%;
+    height: auto;
+    border: 1px solid #000;
+    box-shadow: 0 10px 10px rgba(0,0,0,0.3);
+    display: flex;
+    justify-content: center;
+  }
+  .btn-nav {
+    font-size: 50px;
+    margin: 0 15px;
+    cursor: pointer;
+  }
