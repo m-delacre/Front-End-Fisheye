@@ -88,10 +88,7 @@ async function getTotalLike() {
     document.getElementById('totalLike').innerHTML = totalLike;
 };
 
-async function addLike(){
-    totalLike += 1;
-}
 //heartLike
-document.querySelector('.heartLike').addEventListener('click', ()=> addLike());
+//document.querySelector('.heartLike').addEventListener('click', addLike());
 
 init();

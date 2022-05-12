@@ -25,14 +25,6 @@ function mediaFactory(data) {
             img.setAttribute("alt", title);
             photo.appendChild(img);
         }
-        
-        /*
-        //la photo
-        const img = document.createElement( 'img' );
-        img.setAttribute("src", picture);
-        img.setAttribute("alt", `${title}`);
-        photo.appendChild(img); 
-        */
 
         //partie info
         const info = document.createElement('div');
@@ -44,7 +36,7 @@ function mediaFactory(data) {
         //le like
         const like = document.createElement( 'div' );
         like.setAttribute('class','mediaCard--info--like');
-        const nombreLike = document.createElement( 'p' );
+        let nombreLike = document.createElement( 'p' );
         nombreLike.textContent = `${likes}`;
         const coeur = document.createElement('i');
         coeur.setAttribute("class",'fa-solid fa-heart heartLike');
@@ -53,6 +45,10 @@ function mediaFactory(data) {
         like.appendChild(coeur);
         info.appendChild(titrePhoto);
         info.appendChild(like);
+        like.addEventListener('click', ()=>{
+            nombreLike.textContent = parseInt(nombreLike.textContent, 10) + 1;
+            getTotalLike();
+        });
         
         //link les deux partie
         article.appendChild(photo);
