@@ -87,11 +87,6 @@ function validationForm(){
   }
 }
 
-//affiche le message 'merci de votre inscription'
-function envoieValider(){
-  modal.style.display = "none";
-}
-
 //au clique sur envoyé
 formulaire.addEventListener('submit', function (event) {
   event.preventDefault();

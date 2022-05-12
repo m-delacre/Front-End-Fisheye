@@ -57,7 +57,7 @@
     <!--bottom panel-->
     <div class="bottom-panel">
       <div class="bottom-panel--like">
-        <p>999 999</p>
+        <p id="totalLike">999 999</p>
         <i class="fa-solid fa-heart heart"></i>
       </div>
       <div class="bottom-panel--tarif">
@@ -108,21 +108,16 @@
         <!--fin formulaire-->
 			</div>
 		</div>
-    <!--lightbox-->
-    <div class="container">
-
-      <div class="slider" id="slider">
-        <img class="active img" src="https://images.unsplash.com/photo-1559467713-f830ec30e3e4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80">
-        <img class="img" src="https://images.unsplash.com/photo-1590634875887-a6a516622e2a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80">
-        <img class="img" src="https://images.unsplash.com/photo-1590664216212-62e763768cae?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80">
+    <!--carousel-->
+    <div class="lightbox ">
+      <button id="lightbox_fermer"><</button>
+      <button class="lightbox_suivant">x</button>
+      <button class="lightbox_precedent">></button>
+      <div class="lightbox_media">
+        <video > <source src=""></video>
+        <img src="" alt="">
+        <div class="lightbox_txt">test</div>
       </div>
-  
-      <div class="cont-btn">
-        <div class="btn-nav left">←</div>
-        <div class="btn-nav right">→</div>
-      </div>
-  
-    </div>
     <!--scripts-->
     <script src="/scripts/factories/media_factory.js"></script>
     <script src="/scripts/utils/contactForm.js"></script>
