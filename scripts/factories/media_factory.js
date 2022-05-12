@@ -47,7 +47,7 @@ function mediaFactory(data) {
         info.appendChild(like);
         like.addEventListener('click', ()=>{
             nombreLike.textContent = parseInt(nombreLike.textContent, 10) + 1;
-            getTotalLike();
+            document.getElementById('totalLike').textContent = parseInt(document.getElementById('totalLike').textContent,10)+1;
         });
         
         //link les deux partie

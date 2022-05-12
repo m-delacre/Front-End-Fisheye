@@ -75,11 +75,11 @@ async function init() {
 };
 
 //likes
-//gestion des likes
-
+//récup les likes de bases
 async function getTotalLike() {
     const { media } = await getMedias();
     document.getElementById('totalLike').innerHTML = totalLike;
+    totalLike = 0;
     media.forEach((media) => {
         if(media.photographerId == id){
             totalLike += media.likes;
