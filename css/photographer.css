@@ -54,7 +54,7 @@
 }
 
 .contact_button {
-    font-size: 20px;
+    font-size: 17px;
     font-weight: bold;
     color: white;
     padding: 11px;
@@ -70,7 +70,7 @@
 
 .formulaire{
     width: 100%;
-    height: auto;
+    height: 100%;
     position: absolute;
     top: 0;
     left: 0;
@@ -99,20 +99,19 @@
     margin-top: -10px;
 }
 
-.headerModal-text{
+.headerModal-text h2{
     display: flex;
     flex-direction: column;
     margin-left: 0;
     font-size: 40px;
-    font-weight: lighter;
-    width: 80%;
+    font-weight: bold;
+    width: 100%;
     height: fit-content;
-    margin-top: -50px;
 }
 
 #contact_name{
-    margin-top: -50px;
-    font-size: 40px;
+    margin-top: -20px;
+    font-size: 35px;
 }
 
 .modal header img {
@@ -129,6 +128,7 @@ form {
     width: 100%;
     flex-direction: column;
     align-items: flex-start;
+    margin-top: -10px;
 }
 
 form label {
@@ -147,7 +147,7 @@ form div {
 
 form input {
     width: 100%;
-    height: 55px;
+    height: 40px;
     border: none;
     border-radius: 5px;
     padding-left: 5px;
@@ -188,6 +188,21 @@ form input {
 
 .formData[data-error-visible="true"] .text-control {
     border: 3px solid #6d0f0f;
+}
+
+.send_button {
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+    padding: 11px;
+    width: 140px;
+    height: 50px;
+    border: none;
+    background-color: #901C1C;
+    border-radius: 5px;
+    cursor: pointer;
+    bottom: 0;
+    right: 20px;
 }
 
 
@@ -237,9 +252,6 @@ nav{
     font: normal bold 13px/1em Arial, Verdana, Helvetica;
     background-color: #901C1C;
     border-radius: 5px;
-}
-
-.navbar a {
     padding: 18px 0;
     text-decoration: none;
     color: white;
@@ -247,6 +259,7 @@ nav{
     padding-left: 10px;
     font-size: 15px;
 }
+
 
 .navbar li ul {
     display: none;

@@ -14,7 +14,7 @@
     <title>Fisheye - photographe </title>
   </head>
   <body>
-    <header>
+    <header id="header">
       <a href="./index.html"><img src="assets/images/logo.png" class="logo" alt="Fisheye Home page" id="logo"/></a>
     </header>
     <!--info du photographe-->
@@ -41,11 +41,11 @@
       <!--trier par menu déroulant-->
       <nav>
         <ul class="navbar">
-          <li>
-            <a href="#" id="populaire">Popularité<i class="fa-solid fa-angle-up arrow"></i></a>
+          <li onclick="mediaSortByLikes()">
+            Popularité<i class="fa-solid fa-angle-up arrow"></i>
             <ul>
-              <li><a href="#">Date</a></li>
-              <li><a href="#">Titre</a></li>
+              <li onclick="mediaSortByDate()">Date</li>
+              <li onclick="mediaSortByTitle()">Titre</li>
             </ul>
           </li>
         </ul>
@@ -57,13 +57,25 @@
     <!--bottom panel-->
     <div class="bottom-panel">
       <div class="bottom-panel--like">
-        <p id="totalLike">999 999</p>
+        <p id="totalLike"></p>
         <i class="fa-solid fa-heart heart"></i>
       </div>
       <div class="bottom-panel--tarif">
         <p id="pricetag">XXX€ /jour</p>
       </div>
     </div>
+    <!--carousel-->
+    <div class="lightbox ">
+      <button id="lightbox_fermer"><</button>
+      <button class="lightbox_suivant">x</button>
+      <button class="lightbox_precedent">></button>
+      <div class="lightbox_media">
+        <video > <source src=""></video>
+        <img src="" alt="">
+        <div class="lightbox_txt">test</div>
+      </div>
+    </div>
+    </main>
     <!--modal de contact-->
     <div id="contact_modal" class="formulaire">
 			<div class="modal" aria-hidden="true" role="dialog" aria-describedby="modalTitle">
@@ -103,23 +115,11 @@
               <textarea name="message" id="commentaire"></textarea>
           </p>
           </div>
-          <button class="contact_button">Envoyer</button>
+          <button class="send_button">Envoyer</button>
         </form>
         <!--fin formulaire-->
 			</div>
 		</div>
-    <!--carousel-->
-    <div class="lightbox ">
-      <button id="lightbox_fermer"><</button>
-      <button class="lightbox_suivant">x</button>
-      <button class="lightbox_precedent">></button>
-      <div class="lightbox_media">
-        <video > <source src=""></video>
-        <img src="" alt="">
-        <div class="lightbox_txt">test</div>
-      </div>
-    </div>
-    </main>
     <!--scripts-->
     <script src="/scripts/factories/media_factory.js"></script>
     <script src="/scripts/utils/contactForm.js"></script>

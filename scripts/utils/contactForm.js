@@ -1,30 +1,25 @@
-const modal = document.getElementById("contact_modal");
-const main = document.getElementById("main");
-const trie = document.getElementById('section-trie');
-const logo = document.getElementById('logo');
+const modal = document.getElementById('contact_modal');
+const main = document.getElementById('main');
+const header = document.getElementById('header');
 
 function displayModal() {
-	logo.style.display = "none";
+	header.style.display = "none";
 	main.style.display = "none";
-  trie.style.display = "none";
 	modal.style.display = "flex";
   //gestion de visibilité pour les lecteurs d'écrans
   modal.setAttribute('aria-hidden','false');
-  logo.setAttribute('aria-hidden','true');
 	main.setAttribute('aria-hidden','true');
-  trie.setAttribute('aria-hidden','true');
+  header.setAttribute('aria-hidden','true');
 }
 
 function closeModal() {
-	logo.style.display = "block";
+	header.style.display = "block";
 	main.style.display = "block";
-    trie.style.display = "block";
 	modal.style.display = "none";
   //gestion de visibilité pour les lecteurs d'écrans
   modal.setAttribute('aria-hidden','true');
-  logo.setAttribute('aria-hidden','false');
+  header.setAttribute('aria-hidden','false');
 	main.setAttribute('aria-hidden','false');
-  trie.setAttribute('aria-hidden','false');
 }
 
 //variables

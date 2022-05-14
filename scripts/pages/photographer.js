@@ -56,7 +56,6 @@ async function findPhotographe() {
 
 async function displayMedia(medias) {
     const mediaSection = document.getElementById("media_section");
-
     medias.forEach((media) => {
         if(media.photographerId == id){
             const mediaModel = mediaFactory(media);
@@ -66,16 +65,7 @@ async function displayMedia(medias) {
     });
 };
 
-async function init() {
-    getPhotographers();
-    findPhotographe();
-    const { media } = await getMedias();
-    displayMedia(media);
-    getTotalLike();
-};
-
-//likes
-//récup les likes de bases
+//récup les likes total de bases
 async function getTotalLike() {
     const { media } = await getMedias();
     document.getElementById('totalLike').innerHTML = totalLike;
@@ -88,7 +78,47 @@ async function getTotalLike() {
     document.getElementById('totalLike').innerHTML = totalLike;
 };
 
-//heartLike
-//document.querySelector('.heartLike').addEventListener('click', addLike());
+//trier par titre 
+async function mediaSortByTitle(){
+    const { media } = await getMedias();
+    media.sort(function(a, b) {
+        return a.title.toLowerCase().localeCompare(b.title.toLowerCase());
+    });
+    document.getElementById("media_section").innerHTML = "";
+    displayMedia(media);
+    getTotalLike();
+}
+
+//trier par date
+async function mediaSortByDate(){
+    const { media } = await getMedias();
+    media.sort(function(a,b){
+        return new Date(b.date) - new Date(a.date);
+    });
+    console.log(media);
+    document.getElementById("media_section").innerHTML = "";
+    displayMedia(media);
+    getTotalLike();
+}
+
+//trier par popularité
+async function mediaSortByLikes(){
+    const { media } = await getMedias();
+    media.sort(function(a,b){
+        return b.likes - a.likes;
+    });
+    console.log(media);
+    document.getElementById("media_section").innerHTML = "";
+    displayMedia(media);
+    getTotalLike();
+}
+
+async function init() {
+    getPhotographers();
+    findPhotographe();
+    const { media } = await getMedias();
+    displayMedia(media);
+    getTotalLike();
+};
 
 init();

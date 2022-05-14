@@ -46,8 +46,14 @@ function mediaFactory(data) {
         info.appendChild(titrePhoto);
         info.appendChild(like);
         like.addEventListener('click', ()=>{
-            nombreLike.textContent = parseInt(nombreLike.textContent, 10) + 1;
-            document.getElementById('totalLike').textContent = parseInt(document.getElementById('totalLike').textContent,10)+1;
+            let nblike = parseInt(nombreLike.textContent, 10);
+            if(nblike == likes){
+                nombreLike.textContent = nblike + 1;
+                document.getElementById('totalLike').textContent = parseInt(document.getElementById('totalLike').textContent,10)+1;
+            }else{
+                nombreLike.textContent = likes;
+                document.getElementById('totalLike').textContent = parseInt(document.getElementById('totalLike').textContent,10)-1;
+            }
         });
         
         //link les deux partie
