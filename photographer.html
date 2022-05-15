@@ -14,17 +14,6 @@
     <title>Fisheye - photographe </title>
   </head>
   <body>
-    <!--carousel-->
-    <div id= "lightbox" class="lightbox">
-      <button id="lightbox_fermer" class="lightbox_fermer"><img class="filter-red" src="assets/icons/close.svg" onclick="closeLightBox()"/></button>
-      <button id="lightbox_suivant" class="lightbox_suivant">></button>
-      <button id="lightbox_precedent" class="lightbox_precedent"><</button>
-      <div class="lightbox_media">
-        <video src="" alt=""></video>
-        <img src="" alt="">
-        <div class="lightbox_txt">test</div>
-      </div>
-    </div>
     <header id="header">
       <a href="./index.html"><img src="assets/images/logo.png" class="logo" alt="Fisheye Home page" id="logo"/></a>
     </header>
@@ -121,6 +110,17 @@
         <!--fin formulaire-->
 			</div>
 		</div>
+    <!--carousel-->
+    <div id= "lightbox" class="lightbox">
+      <button id="lightbox_fermer" class="lightbox_fermer"><img src="assets/icons/close.svg" onclick="closeLightBox()"/></button>
+      <button id="lightbox_suivant" class="lightbox_suivant">></button>
+      <button id="lightbox_precedent" class="lightbox_precedent"><</button>
+      <div class="lightbox_media">
+        <video src="" alt=""></video>
+        <img src="" alt="">
+        <div class="lightbox_txt">test</div>
+      </div>
+    </div>
     <!--scripts-->
     <script src="/scripts/factories/media_factory.js"></script>
     <script src="/scripts/pages/photographer.js"></script>

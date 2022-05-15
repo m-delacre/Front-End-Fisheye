@@ -95,7 +95,6 @@ async function mediaSortByDate(){
     media.sort(function(a,b){
         return new Date(b.date) - new Date(a.date);
     });
-    console.log(media);
     document.getElementById("media_section").innerHTML = "";
     displayMedia(media);
     getTotalLike();
@@ -107,7 +106,6 @@ async function mediaSortByLikes(){
     media.sort(function(a,b){
         return b.likes - a.likes;
     });
-    console.log(media);
     document.getElementById("media_section").innerHTML = "";
     displayMedia(media);
     getTotalLike();
@@ -123,3 +121,6 @@ async function init() {
 };
 
 init();
+
+
+//lightbox
