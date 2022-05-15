@@ -61,5 +61,5 @@ function mediaFactory(data) {
         article.appendChild(info);
         return (article);
     }
-    return { id, photographerId, title, picture, likes, getMediaCardDOM }
+    return { id, photographerId, title, picture, movie, likes, getMediaCardDOM }
 }

@@ -117,6 +117,7 @@ async function init() {
     getPhotographers();
     findPhotographe();
     const { media } = await getMedias();
+    console.log(getListeMedias(media));
     displayMedia(media);
     getTotalLike();
 };
