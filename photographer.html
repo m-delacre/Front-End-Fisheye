@@ -32,7 +32,7 @@
         </div>
         <!--Photo-->
         <div class="photograph-photo">
-          <p><img src="./assets/photographers/account.png" id="photoProfil" class="photograph-img"></p>
+          <p><img src="./assets/photographers/account.png" id="photoProfil" class="photograph-img" alt="photo du photographe"></p>
         </div>
       </div>
       <!--trier par-->
@@ -71,15 +71,15 @@
 			<div class="modal" aria-hidden="true" role="dialog" aria-describedby="modalTitle">
 				<header>
           <div class="headerModal-text">
-            <h2>Contactez-moi</h2>
+            <h2 id="modalTitle">Contactez-moi</h2>
             <h2 id="contact_name"></h2>
           </div>
           <div class="headerModal-icon">
-            <img src="assets/icons/close.svg" onclick="closeModal()" />
+            <img src="assets/icons/close.svg" onclick="closeModal()" alt="close button" />
           </div>
         </header>
         <!--formulaire-->
-        <form name="contact" action="" method="get" id="formulaire">
+        <form name="contact" method="get" id="formulaire">
           <!--Prénom-->
           <div class="formData" data-error="Veuillez entrer au moins 2 caractères ou plus pour le champ du prénom." data-error-visible="false">
             <label for="prenom">Prénom</label><br>
@@ -100,9 +100,9 @@
 
           <div class="textarea-message">
             <p>
-              <label for="message">Votre message</label>
+              <label for="commentaire">Votre message</label>
               <br/>
-              <textarea name="message" id="commentaire"></textarea>
+              <textarea name="commentaire" id="commentaire"></textarea>
           </p>
           </div>
           <button class="send_button">Envoyer</button>
@@ -111,12 +111,12 @@
 			</div>
 		</div>
     <!--carousel-->
-    <div id= "lightbox" class="lightbox">
-      <button id="lightbox_fermer" class="lightbox_fermer"><img src="assets/icons/close.svg" onclick="closeLightBox()"/></button>
-      <button id="lightbox_suivant" class="lightbox_suivant">></button>
-      <button id="lightbox_precedent" class="lightbox_precedent"><</button>
+    <div id= "LightBox" class="lightbox">
+      <button id="lightbox_fermer" class="lightbox_fermer"><img src="assets/icons/close.svg" onclick="closeLightBox()" alt="close button"/></button>
+      <button id="lightbox_precedent" class="lightbox_precedent" onclick="previousMedia()"><</button>
+      <button id="lightbox_suivant" class="lightbox_suivant" onclick="nextMedia()">></button>
       <div class="lightbox_media">
-        <video src="" alt=""></video>
+        <video src=""></video>
         <img src="" alt="">
         <div class="lightbox_txt">test</div>
       </div>
@@ -124,7 +124,7 @@
     <!--scripts-->
     <script src="/scripts/factories/media_factory.js"></script>
     <script src="/scripts/pages/photographer.js"></script>
-    <script src="/scripts/utils/carousel.js"></script>
     <script src="/scripts/utils/contactForm.js"></script>
+    <script src="/scripts/utils/carousel.js"></script>
   </body>
 </html>

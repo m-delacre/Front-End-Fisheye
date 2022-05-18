@@ -405,7 +405,7 @@ nav{
 /*lightbox*/
 .lightbox{
     position: absolute;
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     width: 100%;

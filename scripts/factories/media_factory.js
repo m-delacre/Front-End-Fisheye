@@ -19,11 +19,17 @@ function mediaFactory(data) {
             vid.setAttribute('src',movie);
             //vid.setAttribute('poster', '');
             photo.appendChild(vid);
+            photo.addEventListener('click', ()=>{
+                openLightBox(this.movie, );
+            });
         } else{
             const img = document.createElement( 'img' );
             img.setAttribute("src", picture);
             img.setAttribute("alt", title);
             photo.appendChild(img);
+            photo.addEventListener('click', ()=>{
+                openLightBox(this.picture, this.title);
+            });
         }
 
         //partie info
@@ -61,5 +67,10 @@ function mediaFactory(data) {
         article.appendChild(info);
         return (article);
     }
-    return { id, photographerId, title, picture, movie, likes, getMediaCardDOM }
+
+    if(image == undefined){
+        return { id, photographerId, title, movie, likes, getMediaCardDOM }
+    } else{
+        return { id, photographerId, title, picture, likes, getMediaCardDOM }
+    }
 }
