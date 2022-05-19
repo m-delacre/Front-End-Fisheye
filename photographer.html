@@ -112,14 +112,14 @@
 		</div>
     <!--carousel-->
     <div id= "LightBox" class="lightbox">
-      <button id="lightbox_fermer" class="lightbox_fermer"><img src="assets/icons/close.svg" onclick="closeLightBox()" alt="close button"/></button>
-      <button id="lightbox_precedent" class="lightbox_precedent" onclick="previousMedia()"><</button>
-      <button id="lightbox_suivant" class="lightbox_suivant" onclick="nextMedia()">></button>
+      <button id="lightbox_fermer" class="lightbox_fermer" onclick="closeLightBox()"><i class="fa-solid fa-xmark chevron"></i></button>
+      <button id="lightbox_precedent" class="lightbox_precedent" onclick="previousMedia()"><i class="fa-solid fa-chevron-left chevron"></i></button>
+      <button id="lightbox_suivant" class="lightbox_suivant" onclick="nextMedia()"><i class="fa-solid fa-chevron-right chevron"></i></button>
       <div class="lightbox_media">
         <video src=""></video>
         <img src="" alt="">
-        <div class="lightbox_txt">test</div>
       </div>
+      <div id="lightbox_txt" class="lightbox_txt">test</div>
     </div>
     <!--scripts-->
     <script src="/scripts/factories/media_factory.js"></script>

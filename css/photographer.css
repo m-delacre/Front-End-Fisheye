@@ -404,28 +404,74 @@ nav{
 
 /*lightbox*/
 .lightbox{
-    position: absolute;
-    display: none;
-    align-items: center;
-    justify-content: center;
     width: 100%;
     height: 100%;
-    margin: 0;
-    padding: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0%;
+    margin: 0%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(255, 255, 255);
+}
+
+.chevron{
+    color: #901C1C;
+    font-size: 80px;
+}
+
+.lightbox button{
+    border: 0px;
+    background-color: #312e2e00;
 }
 
 .lightbox_media video{
-    width: 50%;
-    height: 50%;
+    width: 100%;
+    height: 100%;
 }
 
 .lightbox_media img{
-    width: 50%;
-    height: 50%;
-    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    margin-top: -650px;
 }
 
 .lightbox_media{
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    width: 1280px;
+    height: 720px;
+    padding: 10px;
+    position: absolute;
+}
+
+#lightbox_txt{
+    color: #901C1C;
+    font-size: 40px;
+    position: absolute;
+    left: 315px;
+    top: 90%;
+}
+
+#lightbox_suivant{
+    position: absolute;
+    top: 50%;
+    right: 50px;
+}
+
+#lightbox_precedent{
+    position: absolute;
+    top: 50%;
+    left: 50px;
+}
+
+#lightbox_fermer{
+    position: absolute;
+    top: 70px;
+    right: 50px;
 }

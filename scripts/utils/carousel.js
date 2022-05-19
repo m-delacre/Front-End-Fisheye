@@ -5,6 +5,8 @@ function closeLightBox(){
     croix.addEventListener('click', ()=>{
         document.getElementById('LightBox').style.display = "none";
     });
+    header.style.display = "block";
+	main.style.display = "block";
 }
 
 function getListeMedias(medias){
@@ -42,6 +44,8 @@ function getListeTitres(medias){
 function openLightBox(media, title){
     document.getElementById('LightBox').style.display = "flex";
     setMedia(media, title);
+    header.style.display = "none";
+	main.style.display = "none";
 }
 
 async function setMedia(monMedia, title){
@@ -69,7 +73,7 @@ async function setMedia(monMedia, title){
         source.setAttribute('alt', title);
         current = listeMedias.indexOf(monMedia);
     }
-    let titre = document.querySelector('div.lightbox > div.lightbox_media > div.lightbox_txt');
+    let titre = document.getElementById('lightbox_txt');
     titre.innerHTML = title;
 }
 
