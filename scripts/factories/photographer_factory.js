@@ -17,14 +17,17 @@ function photographerFactory(data) {
         const nom = document.createElement( 'h2' );
         nom.textContent = name;
         //la localisation
-        const localisation = document.createElement( 'h3' );
+        const localisation = document.createElement( 'p' );
         localisation.textContent = `${city}, ${country}`;
+        localisation.setAttribute("class","accueilLocalisation");
         //le slogan
-        const slogan = document.createElement( 'h4' );
+        const slogan = document.createElement( 'p' );
         slogan.textContent = tagline;
+        slogan.setAttribute("class","accueilSlogan");
         //prix/heure
-        const prix = document.createElement( 'h5' );
+        const prix = document.createElement( 'p' );
         prix.textContent = `${price}€/jour`;
+        prix.setAttribute("class","accueilPrix");
         //link all
         article.appendChild(lien);
         article.appendChild(nom);

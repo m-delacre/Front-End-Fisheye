@@ -22,9 +22,9 @@
       <div class="photograph-header">
         <!--Info écrite-->
         <div class="photograph-info">
-          <h2 id="photographeName">Nom photographe</h2>
-          <h3 id="photographeLocalisation">Localisation</h3>
-          <h4 id="photographeSlogan">slogan</h4>
+          <h1 id="photographeName">Nom photographe</h1>
+          <p id="photographeLocalisation">Localisation</p>
+          <p id="photographeSlogan">slogan</p>
         </div>
         <!--Contact-->
         <div class="photograph-contact">
@@ -37,15 +37,15 @@
       </div>
       <!--trier par-->
     <section class="section-trie" id="section-trie" aria-hidden="true">
-      <p>Trier par</p>
+      <p aria-label="trier par">Trier par</p>
       <!--trier par menu déroulant-->
      <nav>
        <ul class="dropdown">
-         <li>
+         <li aria-label="trier par popularité">
            <button onclick="mediaSortByLikes()" class="dropbtn">Popularité<i class="fa-solid fa-angle-up arrow"></i></button>
             <ul class="dropdown-content">
-              <li onclick="mediaSortByDate()"><a href="#">Date</a></li>
-              <li onclick="mediaSortByTitle()"><a href="#">Titre</a></li>
+              <li aria-label="trier par date" onclick="mediaSortByDate()"><a href="#">Date</a></li>
+              <li aria-label="trier par titre" onclick="mediaSortByTitle()"><a href="#">Titre</a></li>
             </ul>
          </li>
       </ul>
@@ -72,10 +72,10 @@
 				<header>
           <div class="headerModal-text">
             <h2 id="modalTitle">Contactez-moi</h2>
-            <h2 id="contact_name"></h2>
+            <h2 id="contact_name">Nom Photographe</h2>
           </div>
           <div class="headerModal-icon">
-            <img src="assets/icons/close.svg" onclick="closeModal()" alt="close button" />
+            <img src="assets/icons/close.svg" onclick="closeModal()" alt="close button" aria-label="Close contact form"/>
           </div>
         </header>
         <!--formulaire-->
@@ -83,38 +83,38 @@
           <!--Prénom-->
           <div class="formData" data-error="Veuillez entrer au moins 2 caractères ou plus pour le champ du prénom." data-error-visible="false">
             <label for="prenom">Prénom</label><br>
-            <input class="text-control" type="text" id="prenom" name="prenom"/><br>
+            <input class="text-control" type="text" id="prenom" name="prenom" aria-label="First name"/><br>
           </div>
 
           <!--Nom -->
           <div class="formData" data-error="Veuillez entrer au moins 2 caractères ou plus pour le champ du nom." data-error-visible="false">
             <label for="nom">Nom</label><br>
-            <input class="text-control" type="text" id="nom" name="nom"/><br>
+            <input class="text-control" type="text" id="nom" name="nom" aria-label="Last name"/><br>
           </div>
 
           <!--Email -->
           <div class="formData" data-error="Vous devez entrer une adresse mail valide." data-error-visible="false">
             <label for="email">E-mail</label><br>
-            <input class="text-control" type="email" id="email" name="email"/><br>
+            <input class="text-control" type="email" id="email" name="email" aria-label="Email"/><br>
           </div>
 
           <div class="textarea-message">
             <p>
               <label for="commentaire">Votre message</label>
               <br/>
-              <textarea name="commentaire" id="commentaire"></textarea>
+              <textarea name="commentaire" id="commentaire" aria-label="Your message"></textarea>
           </p>
           </div>
-          <button class="send_button">Envoyer</button>
+          <button class="send_button" aria-label="Send">Envoyer</button>
         </form>
         <!--fin formulaire-->
 			</div>
 		</div>
     <!--carousel-->
-    <div id= "LightBox" class="lightbox">
-      <button id="lightbox_fermer" class="lightbox_fermer" onclick="closeLightBox()"><i class="fa-solid fa-xmark chevron"></i></button>
-      <button id="lightbox_precedent" class="lightbox_precedent" onclick="previousMedia()"><i class="fa-solid fa-chevron-left chevron"></i></button>
-      <button id="lightbox_suivant" class="lightbox_suivant" onclick="nextMedia()"><i class="fa-solid fa-chevron-right chevron"></i></button>
+    <div id= "LightBox" class="lightbox" aria-label="image closeup view" role="dialog">
+      <button id="lightbox_fermer" class="lightbox_fermer" onclick="closeLightBox()" aria-label="Close dialog"><i class="fa-solid fa-xmark chevron"></i></button>
+      <button id="lightbox_precedent" class="lightbox_precedent" onclick="previousMedia()" aria-label="Previous image"><i class="fa-solid fa-chevron-left chevron"></i></button>
+      <button id="lightbox_suivant" class="lightbox_suivant" onclick="nextMedia()" aria-label="Next image"><i class="fa-solid fa-chevron-right chevron"></i></button>
       <div class="lightbox_media">
         <video src=""></video>
         <img src="" alt="">

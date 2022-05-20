@@ -28,7 +28,7 @@ h1 {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 70px;
-    margin-top: 100px;
+    margin-top: 30px;
 }
 
 .photographer_section article {
@@ -41,28 +41,28 @@ h1 {
 
 .photographer_section article h2 {
     color: #D3573C;
-    font-size: 35px;
+    font-size: 32px;
     margin-bottom: -20px;
 }
 
-.photographer_section article h3 {
+.accueilLocalisation {
     color: #901C1C;
     font-size: 20px;
     margin-bottom: -10px;
 }
-.photographer_section article h4 {
+.accueilSlogan {
     color: black;
     font-size: 15px;
-    margin-bottom: -20px;
+    margin-bottom: -10px;
 }
-.photographer_section article h5 {
+.accueilPrix {
     color: gray;
     font-size: 15px;
 }
 
 .photographer_section article img {
-    height: 250px;
-    width: 250px;
+    height: 200px;
+    width: 200px;
     border-radius: 50%;
     object-fit: cover;
 }

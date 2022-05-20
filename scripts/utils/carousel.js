@@ -1,12 +1,15 @@
 let current  = 0;
 
-function closeLightBox(){
+async function closeLightBox(){
     let croix = document.getElementById('lightbox_fermer');
     croix.addEventListener('click', ()=>{
         document.getElementById('LightBox').style.display = "none";
     });
-    header.style.display = "block";
+    await resetMedia();
+    header.style.display = "flex";
 	main.style.display = "block";
+    header.setAttribute('aria-hidden','false');
+	main.setAttribute('aria-hidden','false');
 }
 
 function getListeMedias(medias){
@@ -46,6 +49,8 @@ function openLightBox(media, title){
     setMedia(media, title);
     header.style.display = "none";
 	main.style.display = "none";
+    main.setAttribute('aria-hidden','true');
+    header.setAttribute('aria-hidden','true');
 }
 
 async function setMedia(monMedia, title){
@@ -117,4 +122,13 @@ async function resetMedia(){
         sourceImage.setAttribute('alt', '');  
     }
     
+}
+
+document.onkeydown = (e) => {
+    e = e || window.event;
+    if (e.keyCode === 39) {
+        nextMedia();
+    } else if (e.keyCode === 37) {
+        previousMedia();
+    }
 }

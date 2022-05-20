@@ -17,6 +17,7 @@ function mediaFactory(data) {
             //faire une vidéo
             const vid = document.createElement('video');
             vid.setAttribute('src',movie);
+            vid.setAttribute("aria-label","cliquez pour agrandir");
             //vid.setAttribute('poster', '');
             photo.appendChild(vid);
             photo.addEventListener('click', ()=>{
@@ -26,6 +27,7 @@ function mediaFactory(data) {
             const img = document.createElement( 'img' );
             img.setAttribute("src", picture);
             img.setAttribute("alt", title);
+            img.setAttribute("aria-label","cliquez pour agrandir");
             photo.appendChild(img);
             photo.addEventListener('click', ()=>{
                 openLightBox(this.picture, this.title);
@@ -44,6 +46,7 @@ function mediaFactory(data) {
         like.setAttribute('class','mediaCard--info--like');
         let nombreLike = document.createElement( 'p' );
         nombreLike.textContent = `${likes}`;
+        nombreLike.setAttribute("aria-label","likes");
         const coeur = document.createElement('i');
         coeur.setAttribute("class",'fa-solid fa-heart heartLike');
         coeur.setAttribute("aria-label",'likes');
