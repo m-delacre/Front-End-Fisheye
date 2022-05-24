@@ -5,6 +5,7 @@ function closeLightBox(){
     croix.addEventListener('click', ()=>{
         document.getElementById('LightBox').style.display = "none";
     });
+    document.getElementById('LightBox').style.display = "none";
     resetMedia();
     header.style.display = "flex";
 	main.style.display = "block";
@@ -125,12 +126,29 @@ async function resetMedia(){
     
 }
 
-//gestion du clavier pour next et previous media
-document.onkeydown = (e) => {
-    e = e || window.event;
-    if (e.keyCode === 39) {
-        nextMedia();
-    } else if (e.keyCode === 37) {
-        previousMedia();
-    } //echap
-}
+//Gestion touches clavier
+window.addEventListener("keyup", function (event) {
+    if (event.defaultPrevented) {
+      return; // Ne devrait rien faire si l'événement de la touche était déjà consommé.
+    }
+  
+    switch (event.key) {
+      case "ArrowLeft":
+          previousMedia();
+        // Faire quelque chose pour la touche "left arrow" pressée.
+        break;
+      case "ArrowRight":
+          nextMedia();
+        // Faire quelque chose pour la touche "right arrow" pressée.
+        break;
+      case "Escape":
+        closeLightBox();
+        // Faire quelque chose pour la touche "esc" pressée.
+        break;
+      default:
+        return; // Quitter lorsque cela ne gère pas l'événement touche.
+    }
+  
+    // Annuler l'action par défaut pour éviter qu'elle ne soit traitée deux fois.
+    event.preventDefault();
+  }, true);

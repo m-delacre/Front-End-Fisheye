@@ -49,7 +49,7 @@ async function findPhotographe() {
 
     //assigner les datas au bon endroit
     nom.innerHTML = photographe.name;
-    photoProfil.setAttribute("src", `assets/images/photographers ID Photos/${photographe.portrait}`);
+    photoProfil.setAttribute("src", `assets/images/Photographers ID Photos/${photographe.portrait}`);
     photoProfil.setAttribute("alt",`${photographe.name}`);
     localisation.innerHTML = `${photographe.city}, ${photographe.country}`;
     slogan.innerHTML = photographe.tagline;
