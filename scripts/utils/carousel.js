@@ -132,5 +132,5 @@ document.onkeydown = (e) => {
         nextMedia();
     } else if (e.keyCode === 37) {
         previousMedia();
-    }
+    } //echap
 }

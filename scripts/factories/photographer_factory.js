@@ -1,7 +1,7 @@
 function photographerFactory(data) {
     const { name, id, portrait, city, country, tagline, price } = data;
 
-    const picture = `../assets/images/Photographers ID Photos/${portrait}`;
+    const picture = `assets/images/Photographers ID Photos/${portrait}`;
 
     function getUserCardDOM() {
         //créer un profil
