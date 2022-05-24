@@ -6,7 +6,7 @@ let totalLike = 0;
 
 async function getPhotographers() {
     let photographers = [];
-    await fetch('./data/photographers.json')
+    await fetch('data/photographers.json')
     .then(function(response) {
         return response.json();
     })
@@ -21,7 +21,7 @@ async function getPhotographers() {
 
 async function getMedias() {
     let medias = [];
-    await fetch('./data/photographers.json')
+    await fetch('data/photographers.json')
     .then(function(response) {
         return response.json();
     })
