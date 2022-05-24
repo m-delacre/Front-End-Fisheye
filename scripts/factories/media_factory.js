@@ -21,7 +21,7 @@ function mediaFactory(data) {
             //vid.setAttribute('poster', '');
             photo.appendChild(vid);
             photo.addEventListener('click', ()=>{
-                openLightBox(this.movie, );
+                openLightBox(this.movie, this.title);
             });
         } else{
             const img = document.createElement( 'img' );

@@ -1,11 +1,11 @@
 let current  = 0;
 
-async function closeLightBox(){
+function closeLightBox(){
     let croix = document.getElementById('lightbox_fermer');
     croix.addEventListener('click', ()=>{
         document.getElementById('LightBox').style.display = "none";
     });
-    await resetMedia();
+    resetMedia();
     header.style.display = "flex";
 	main.style.display = "block";
     header.setAttribute('aria-hidden','false');
@@ -110,6 +110,7 @@ async function previousMedia(){
     await setMedia(listeMedias[current], listeTitres[current]);
 }
 
+//reset le media, supprime le dernier choisi pour pas avoir de double affichage
 async function resetMedia(){
     let sourceVideo = document.querySelector('#LightBox > div.lightbox_media > video');
     sourceVideo.setAttribute('src', '');
@@ -124,6 +125,7 @@ async function resetMedia(){
     
 }
 
+//gestion du clavier pour next et previous media
 document.onkeydown = (e) => {
     e = e || window.event;
     if (e.keyCode === 39) {

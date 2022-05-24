@@ -34,6 +34,7 @@ async function getMedias() {
     return ({media: [...medias]})
 }
 
+//définir le photographe qui est sélectionné 
 async function findPhotographe() {
     // Récupère les datas des photographes
     const listePhotographes = await getPhotographers();
@@ -55,6 +56,7 @@ async function findPhotographe() {
     prix.innerHTML = `${photographe.price}€/jour`;
 };
 
+//afficher les médias du photographe
 async function displayMedia(medias) {
     const mediaSection = document.getElementById("media_section");
     medias.forEach((media) => {
