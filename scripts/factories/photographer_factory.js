@@ -8,7 +8,7 @@ function photographerFactory(data) {
         const article = document.createElement( 'article' );
         //la photo de profil
         const lien = document.createElement('a');
-        lien.setAttribute("href", `photographer?id=${id}`);
+        lien.setAttribute("href", `./photographer.html?id=${id}`);
         const img = document.createElement( 'img' );
         img.setAttribute("src", picture);
         img.setAttribute("alt", `photo de ${name}`);
